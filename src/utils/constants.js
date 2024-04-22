@@ -23,5 +23,5 @@ export const SUPPORTED_LANGUAGES = [
 ];
 // export const BARD_KEY="AIzaSyBcW-ueM8asZJRrNSDpdMSqDkA99FGKRis"
 export const BARD_KEY=process.env.REACT_APP_BARD_KEY
-console.log(process.env.REACT_APP_TMDB_API) 
-console.log("Bearer"+process.env.REACT_APP_TMDB_KEY)
+// console.log(process.env.REACT_APP_TMDB_API) 
+// console.log("Bearer"+process.env.REACT_APP_TMDB_KEY)
