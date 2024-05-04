@@ -4,9 +4,9 @@ import { BG_URL } from "../utils/constants"
 const GptSearch = () => {
   return (
     <div>
-      <div className="absolute -z-10">
+      <div className="fixed -z-10 w-full h-full">
     {/*--------- background image ------------------------------------------ */}
-   <img src ={BG_URL} alt="bg" />
+   <img className="md:h-[600px] sm:h-[600px] h-screen lg:h-[700px]  w-full object-cover" src ={BG_URL} alt="bg" />
  </div>
       
       
