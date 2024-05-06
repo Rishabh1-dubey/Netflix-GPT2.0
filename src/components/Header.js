@@ -24,10 +24,10 @@ const Header = () => {
         navigate("/error");
       });
   };
-  const handleGptSearch = () => {
-    //toggle dispatch an action
-    dispatch(toggleGptSerachView());
-  };
+  // const handleGptSearch = () => {
+  //   //toggle dispatch an action
+  //   dispatch(toggleGptSerachView());
+  // };
 
 
   useEffect(() => {
