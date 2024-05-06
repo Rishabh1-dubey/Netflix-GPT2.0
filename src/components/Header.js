@@ -55,6 +55,7 @@ const Header = () => {
  const handleGptSearchClick = () => {
     //toggle dispatch an action
     dispatch(toggleGptSerachView());
+    console.log("hello")
   };
 
   const handleLanguageChange = (e) => {
