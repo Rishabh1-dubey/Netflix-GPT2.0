@@ -3,6 +3,8 @@ import lang from "../utils/languageConstants";
 import { useSelector, useDispatch } from "react-redux";
 import { BARD_KEY, API_OPTIONS } from "../utils/constants";
 import { addGptMovieResult } from "../utils/gptSlice";
+import { consoleOrigin } from "firebase-tools/lib/api";
+import { connectableHostname } from "firebase-tools/lib/utils";
 
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
@@ -38,7 +40,9 @@ const GptSearchBar = () => {
     const movies = text.split(",");
     const promise = movies.map((movie) => searchMovie(movie));
     const bardResults = await Promise.all(promise);
+    console.log(bardResults);
     dispatch(
+      
       addGptMovieResult({ movieNames: movies, movieResults: bardResults })
     );
     console.log(result.response?.candidates[0]?.content?.parts);

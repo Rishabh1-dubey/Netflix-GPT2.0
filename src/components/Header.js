@@ -6,9 +6,8 @@ import { auth } from "../utils/firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
-import { toggleGptSerachView } from "../utils/gptSlice"; 
+import { toggleGptSerachView } from "../utils/gptSlice";
 import { SUPPORTED_LANGUAGES } from "../utils/constants";
-import lang from "../utils/languageConstants";
 import { changeLanguage } from "../utils/configSlice";
 const Header = () => {
   const dispatch = useDispatch();
@@ -28,7 +27,6 @@ const Header = () => {
   //   //toggle dispatch an action
   //   dispatch(toggleGptSerachView());
   // };
-
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -52,10 +50,9 @@ const Header = () => {
     return () => unsubscribe();
   }, []);
 
- const handleGptSearchClick = () => {
+  const handleGptSearchClick = () => {
     //toggle dispatch an action
     dispatch(toggleGptSerachView());
-    console.log("hello")
   };
 
   const handleLanguageChange = (e) => {
